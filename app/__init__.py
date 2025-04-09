@@ -7,7 +7,7 @@ from app.core import settings
 
 # TODO: настроить нормально CORS
 def create_app() -> FastAPI:
-    app = FastAPI(swagger_ui_parameters={"url": f"http://{settings.API_HOST}:{settings.API_PORT}{settings.PREFIX}/openapi.json"})
+    app = FastAPI(swagger_ui_parameters={"url": settings.OPENAPI_URL})
     origins = ["*"]
     app.add_middleware(
         CORSMiddleware,

@@ -10,7 +10,7 @@ class Settings(BaseSettings):
     API_HOST: str
     MAIN_API: str
     API_PORT: int
-    PREFIX: str
+    OPENAPI_URL: str
     model_config = SettingsConfigDict(env_file=".env")
 
 
